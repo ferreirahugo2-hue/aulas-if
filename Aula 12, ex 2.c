@@ -8,7 +8,7 @@ int main() {
     printf("Digite seu primeiro nome: ");
     scanf("%s", nome);
 
-    // Converter para minúsculas
+    
     for (int i = 0; nome[i] != '\0'; i++) {
         nome[i] = tolower(nome[i]);
     }
@@ -17,7 +17,7 @@ int main() {
 
     printf("Quantidade de letras: %d\n", tamanho);
 
-    // Imprimir nome invertido
+    
     printf("Nome invertido: ");
     for (int i = tamanho - 1; i >= 0; i--) {
         printf("%c", nome[i]);
