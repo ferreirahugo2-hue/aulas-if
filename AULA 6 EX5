@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+#define PI 3.14159
+
+float diametro(float r) {
+    return 2 * r;
+}
+
+float circunferencia(float r) {
+    return 2 * PI * r;
+}
+
+float area(float r) {
+    return PI * r * r;
+}
+
+int main() {
+    float r;
+
+    printf("Digite o raio: ");
+    scanf("%f", &r);
+
+    printf("\n--- RESULTADOS ---\n");
+    printf("Raio: %.2f\n", r);
+    printf("Diametro: %.2f\n", diametro(r));
+    printf("Circunferencia: %.2f\n", circunferencia(r));
+    printf("Area: %.2f\n", area(r));
+
+    return 0;
+}
