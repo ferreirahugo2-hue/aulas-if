@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int numero() {
+    return rand() % 10;
+}
+
+int main() {
+    int a, b, respostaUsuario, resultado;
+
+    srand(time(NULL));
+
+    a = numero();
+    b = numero();
+
+    resultado = a + b;
+
+    printf("Quanto e %d + %d? ", a, b);
+    scanf("%d", &respostaUsuario);
+
+    if (respostaUsuario == resultado) {
+        printf("Acertou! 🎉\n");
+    } else {
+        printf("Errou! 😅 O correto e %d\n", resultado);
+    }
+
+    return 0;
+}
