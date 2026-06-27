@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+float diametro(float raio) {
+    return 2 * raio;
+}
+
+int main() {
+    float r, d;
+
+    printf("Digite o raio: ");
+    scanf("%f", &r);
+
+    d = diametro(r);
+
+    printf("Diametro: %.2f\n", d);
+
+    return 0;
+}
