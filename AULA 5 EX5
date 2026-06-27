@@ -1,0 +1,46 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    float C, i, M;
+    int t, mes;
+    char modo;
+
+    printf("Capital: ");
+    scanf("%f", &C);
+
+    printf("Juros (%%): ");
+    scanf("%f", &i);
+
+    printf("Tempo (meses): ");
+    scanf("%d", &t);
+
+    printf("Modo (N - normal, S - secar, E - enxaguar): ");
+    scanf(" %c", &modo);
+
+    printf("\n");
+
+    for(mes = 1; mes <= t; mes++) {
+
+        if(modo == 'N' || modo == 'n') {
+            // Juros compostos
+            M = C * pow((1 + i/100), mes);
+
+        } else if(modo == 'S' || modo == 's') {
+            // Juros simples
+            M = C * (1 + (i/100) * mes);
+
+        } else if(modo == 'E' || modo == 'e') {
+            // Sem rendimento
+            M = C;
+
+        } else {
+            printf("Modo invalido!\n");
+            return 1;
+        }
+
+        printf("Mes %d: %.2f\n", mes, M);
+    }
+
+    return 0;
+}
