@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main() {
+    int numeroSecreto, chute;
+
+    srand(time(NULL));
+
+    numeroSecreto = rand() % 10;
+
+    printf("Adivinhe o numero (0 a 9): ");
+    scanf("%d", &chute);
+
+    if (chute == numeroSecreto) {
+        printf("Parabens! Voce acertou 🎉 O numero era %d\n", numeroSecreto);
+    } else {
+        printf("Errou 😅 O numero era %d\n", numeroSecreto);
+    }
+
+    return 0;
+}
