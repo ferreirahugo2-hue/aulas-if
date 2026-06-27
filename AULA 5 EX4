@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    float C, i, M;
+    int t, mes;
+
+    printf("Capital: ");
+    scanf("%f", &C);
+
+    printf("Juros (%%): ");
+    scanf("%f", &i);
+
+    printf("Tempo (meses): ");
+    scanf("%d", &t);
+
+    for(mes = 1; mes <= t; mes++) {
+        M = C * pow((1 + i/100), mes);
+        printf("Mes %d: %.2f\n", mes, M);
+    }
+
+    return 0;
+}
