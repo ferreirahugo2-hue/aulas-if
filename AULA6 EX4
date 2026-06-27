@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+#define PI 3.14159
+
+float area(float raio) {
+    return PI * raio * raio;
+}
+
+int main() {
+    float r, a;
+
+    printf("Digite o raio: ");
+    scanf("%f", &r);
+
+    a = area(r);
+
+    printf("Area: %.2f\n", a);
+
+    return 0;
+}
