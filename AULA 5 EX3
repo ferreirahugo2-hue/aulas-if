@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    float x, y, resultado;
+
+    printf("X: ");
+    scanf("%f", &x);
+
+    printf("Y: ");
+    scanf("%f", &y);
+
+    resultado = pow(x, y);
+
+    printf("Resultado: %.1f\n", resultado);
+
+    return 0;
+}
