@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main() {
+    int a, b, resposta, resultado;
+    int pontos = 0;
+
+    srand(time(NULL));
+
+    printf("🎮 JOGO DE SOMA INFINITA 🎮\n");
+
+    while (1) {
+        a = rand() % 10;
+        b = rand() % 10;
+
+        resultado = a + b;
+
+        printf("\nQuanto e %d + %d? ", a, b);
+        scanf("%d", &resposta);
+
+        if (resposta == resultado) {
+            pontos++;
+            printf("✔ Acertou! Pontos: %d\n", pontos);
+        } else {
+            printf("❌ Errou! O correto era %d\n", resultado);
+            printf("Fim de jogo! Sua pontuacao final: %d\n", pontos);
+            break;
+        }
+    }
+
+    return 0;
+}
