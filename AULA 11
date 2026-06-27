@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int main() {
+    char nomes[5][50];
+    float notas[5];
+    float soma = 0, media;
+    int i;
+
+    for(i = 0; i < 5; i++) {
+        printf("Digite o nome do aluno %d: ", i + 1);
+        scanf(" %[^\n]", nomes[i]);
+
+        printf("Digite a nota de %s: ", nomes[i]);
+        scanf("%f", &notas[i]);
+
+        soma += notas[i];
+    }
+
+    media = soma / 5;
+
+    printf("\nMedia da turma: %.2f\n", media);
+
+    printf("Alunos com nota maior ou igual a media:\n");
+    for(i = 0; i < 5; i++) {
+        if(notas[i] >= media) {
+            printf("- %s (%.2f)\n", nomes[i], notas[i]);
+        }
+    }
+
+    return 0;
+}
