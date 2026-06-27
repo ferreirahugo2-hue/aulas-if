@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <math.h>
+
+float juros_compostos(float capital, float taxa, int tempo) {
+    float montante;
+
+    montante = capital * pow((1 + taxa/100), tempo);
+
+    return montante - capital;
+}
+
+int main() {
+    float C, i, juros;
+    int t;
+
+    printf("Valor investido: ");
+    scanf("%f", &C);
+
+    printf("Taxa de juros (%%): ");
+    scanf("%f", &i);
+
+    printf("Tempo: ");
+    scanf("%d", &t);
+
+    juros = juros_compostos(C, i, t);
+
+    printf("Juros compostos: %.2f\n", juros);
+
+    return 0;
+}
